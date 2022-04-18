@@ -6,7 +6,7 @@ MyData-Shield의 Batch type 입니다. <br/>
 * OS : Window10 이상, Ubuntu 16 이상, Centos 7 이상
 * PostgreSQL 
 * python 3.6 이상
-* 
+
 ### Python 외부 모듈
 * pandas 1.4.1
 * SQLAlcemy 1.4.32
@@ -18,7 +18,7 @@ MyData-Shield의 Batch type 입니다. <br/>
 * 개인정보로 생각되는 '항목명' 식별 및 설정
 * 해당 데이터 형식에 맞게 정규 표현식 및 문자열 치환으로 마스킹처리
 * 형식이 일정하여 예측가능한 개인정보데이터에 대한 가명처리
-* 
+
 ### 가명 처리 기법
 * 마스킹 (ex : 123-124-1235 -> 123-***-****)
 * 특정 항목들에 대한 암호화(예정)
