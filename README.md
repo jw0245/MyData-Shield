@@ -8,10 +8,10 @@ MyData-Shield의 Batch type 입니다. <br/>
 * python 3.6 이상
 
 ### Python 외부 모듈
-* pandas 1.4.1
-* SQLAlcemy 1.4.32
+* pandas 1.3.5
+* SQLAlcemy 1.4.36
 * psycopg2-binary 2.9.3
-* numpy 1.21.5
+* numpy 1.21.6
 * pustil 5.9.0
 * faker 13.11.0
 
