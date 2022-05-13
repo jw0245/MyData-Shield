@@ -85,7 +85,7 @@ MyData-Shield의 Batch type 입니다. <br/>
   
 ## 실행
 * Python 가상환경 실행 ( env/Scipts )
-<br>
+
 **Window** 
 ```
 activate.bat
