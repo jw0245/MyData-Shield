@@ -44,7 +44,7 @@ MyData-Shield의 Batch type 입니다. <br/>
   * data_c(데이터를 한번 처리할 양), time_c(가명처리가 완료 후 추가 데이터가 생기는 확인 하는 '초' 단위 주기)
   * table_target = { '항목명' = 가명 처리 방법, column_r : anony.faker.resdata } 테이블안에 가명 처리를 원하는 칼럼명 및 처리 방법 입력, column_r의 경우 테이블안에 resdata가   존재하면 사용, 존재하지 않으면 주석처리 (가명 처리 방법은 3 설명 참고) 
   * res_target = { '힝목명' = 가명 처리 방법 } resdata 내에 가명 처리를 원하는 항목명 및 처리 방법 입력
-3. 가명 처리 기능
+3. 가명 처리 방법
   - Faker
   * anony.faker.fake_name ( 홍길동 -> 최지현 )
   * anony.faker.fake_character ( private_info - > OMeJZiramzaABneExVh)
@@ -60,8 +60,8 @@ MyData-Shield의 Batch type 입니다. <br/>
   * anony.faker.fake_ip ( 192.0.0.1 -> 104.67.80.197 )
   * anony.faker.redirect_uri ( http://naber.com -> http://yuhanhoesa.kr/)
   * anony.faker.sha256 ( private_code -> 2d78ba29e9118929421ab2ab67db91208a770738aa0fad1b33e96cbbd092d042 )
-  <br>
-  -Masking
+  <br/>
+  - Masking
   * anoy.Masking.p_data ( abcde1234 -> abcd***** )
   * anony.Masking.p_name ( 홍길동 -> 홍** )
   * anony.Masking.p_car_num ( 차량 09 1234 -> 차량 09 ****)
