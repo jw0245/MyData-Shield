@@ -34,15 +34,21 @@ MyData-Shield의 Batch type 입니다. <br/>
 
 ## 설정
 1. **Config.py**의 DB정보 입력
-  * host_r, dbname_r, username_r, password_r, port_r, table, schema_r 에 가명처리를 원하는 table이 존재하는 Postgrsql DB정보 입력
-  * 해당 테이블에 resdata( log type )정보를 담은 칼럼을 column_r에 입력
-  * host_p, dbname_p, username_p, password_p, port_p, schema_p 에 가명처리된 데이터가 저장될 Postgrsql DB정보 입력
-  * 추가로 가명처리를 원하는 항목이 존재하면 primary_key에 입력
-  * target_table 설정을 통해 resdata에 존재하는 가명 처리 항목명이 저장됨.
+  * **host_r, dbname_r, username_r, password_r, port_r, table, schema_r** 에 가명처리를 원하는 table이 존재하는 Postgrsql DB정보 입력
+  * 해당 테이블에 **resdata**( log type )정보를 담은 칼럼을 **column_r**에 입력
+  * **host_p, dbname_p, username_p, password_p, port_p, schema_p** 에 가명처리된 데이터가 저장될 Postgrsql DB정보 입력
+  * 추가로 가명처리를 원하는 항목이 존재하면 **primary_key**에 입력
+  * **target_table** 설정을 통해 resdata에 존재하는 가명 처리 항목명이 저장됨.
 
 2. **Config.py** 가명처리 정보 입력
-  * data_c(데이터를 한번 처리할 양), time_c(가명처리가 완료 후 추가 데이터가 생기는 확인 하는 '초' 단위 주기)
-  * table_target = { '항목명' = 가명 처리 방법, column_r : anony.faker.resdata } 테이블안에 가명 처리를 원하는 칼럼명 및 처리 방법 입력, column_r의 경우 테이블안에 resdata가   존재하면 사용, 존재하지 않으면 주석처리 (가명 처리 방법은 3 설명 참고) 
+  * **data_c** (데이터를 한번 처리할 양), **time_c** (가명처리가 완료 후 추가 데이터가 생기는 확인 하는 '초' 단위 주기)
+  * '''
+     table_target = { 
+                      '항목명' = 가명 처리 방법,
+                      column_r : anony.faker.resdata
+                      }
+                      '''
+  -> 테이블안에 가명 처리를 원하는 칼럼명 및 처리 방법 입력, column_r의 경우 테이블안에 resdata가   존재하면 사용, 존재하지 않으면 **주석처리** (가명 처리 방법은 3. 가명 처리 방법 설명 참고) 
   * res_target = { '힝목명' = 가명 처리 방법 } resdata 내에 가명 처리를 원하는 항목명 및 처리 방법 입력
   * 
 **3. 가명 처리 방법**
