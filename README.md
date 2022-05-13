@@ -24,8 +24,8 @@ MyData-Shield의 Batch type 입니다. <br/>
 * Masking (ex : 123-124-1235 -> 123-***-****)
 * Faker (ex : 홍길동 -> 김철수)
 * hash Encripytin (sha256)
-* 
-* ### 익명 처리한 데이터 DB연동 테스트
+
+## 익명 처리한 데이터 DB연동 테스트
 * PostgreSQL에 저장
 * 대량의 데이터 처리시 메모리에 대한 문제 해결을 위해 데이터를 일정 주기 및 수량으로 처리
 
