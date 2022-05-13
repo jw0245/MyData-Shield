@@ -34,14 +34,40 @@ MyData-Shield의 Batch type 입니다. <br/>
 
 ### 설정
 1. **Config.py**의 DB정보 입력
-  1) host_r, dbname_r, username_r, password_r, port_r, table, schema_r 에 가명처리를 원하는 table이 존재하는 Postgrsql DB정보 입력
-  2) 해당 테이블에 resdata( log type )정보를 담은 칼럼을 column_r에 입력
-  3) host_p, dbname_p, username_p, password_p, port_p, schema_p 에 가명처리된 데이터가 저장될 Postgrsql DB정보 입력
-  4) 추가로 가명처리를 원하는 항목이 존재하면 primary_key에 입력
-  5) target_table 설정을 통해 resdata에 존재하는 가명 처리 항목명이 저장됨.
+  * host_r, dbname_r, username_r, password_r, port_r, table, schema_r 에 가명처리를 원하는 table이 존재하는 Postgrsql DB정보 입력
+  * 해당 테이블에 resdata( log type )정보를 담은 칼럼을 column_r에 입력
+  * host_p, dbname_p, username_p, password_p, port_p, schema_p 에 가명처리된 데이터가 저장될 Postgrsql DB정보 입력
+  * 추가로 가명처리를 원하는 항목이 존재하면 primary_key에 입력
+  * target_table 설정을 통해 resdata에 존재하는 가명 처리 항목명이 저장됨.
 
 2. **Config.py** 가명처리 정보 입력
-  1) data_c(데이터를 한번 처리할 양), time_c(가명처리가 완료 후 추가 데이터가 생기는 확인 하는 '초' 단위 주기)
-  2) table_target = { '항목명' = 가명 처리 방법, column_r : anony.faker.resdata } 테이블안에 가명 처리를 원하는 칼럼명 및 처리 방법 입력, column_r의 경우 테이블안에 resdata가   존재하면 사용, 존재하지 않으면 주석처리 
-  3) res_target = { '힝목명' = 가명 처리 방법 }
-
+  * data_c(데이터를 한번 처리할 양), time_c(가명처리가 완료 후 추가 데이터가 생기는 확인 하는 '초' 단위 주기)
+  * table_target = { '항목명' = 가명 처리 방법, column_r : anony.faker.resdata } 테이블안에 가명 처리를 원하는 칼럼명 및 처리 방법 입력, column_r의 경우 테이블안에 resdata가   존재하면 사용, 존재하지 않으면 주석처리 (가명 처리 방법은 3 설명 참고) 
+  * res_target = { '힝목명' = 가명 처리 방법 } resdata 내에 가명 처리를 원하는 항목명 및 처리 방법 입력
+3. 가명 처리 기능
+  - Faker
+  * anony.faker.fake_name ( 홍길동 -> 최지현 )
+  * anony.faker.fake_character ( private_info - > OMeJZiramzaABneExVh)
+  * anony.faker.fake_num ( num_faker shows 10 random digits )
+  * anony.faker.fake_id ( secret_info -> kNTHhhYZkoKHahL5u7I2D)
+  * anony.faker.account_num ( 35600812438931 -> 3563368404692281)
+  * anony.faker.client_id ( 20-50 random character generation )
+  * anony.faker.client_secret ( random md5(), ex) 3asdk1j20asdkl1 -> 8451f734df34b7f66dd5fd820383f122
+  * anony.faker.domain ( 'naber.com' -> 'hangim.jusighoesa.baggimno.com')
+  * anony.faker.fake_num8 ( num_faker shows 8 random digits )
+  * anony.faker.fake_num13 ( num_faker shows 13 random digits )
+  * anony.faker.fake_regno ( 000-00-0000 -> 432-71-3211 )
+  * anony.faker.fake_ip ( 192.0.0.1 -> 104.67.80.197 )
+  * anony.faker.redirect_uri ( http://naber.com -> http://yuhanhoesa.kr/)
+  * anony.faker.sha256 ( private_code -> 2d78ba29e9118929421ab2ab67db91208a770738aa0fad1b33e96cbbd092d042 )
+  <br>
+  -Masking
+  * anoy.Masking.p_data ( abcde1234 -> abcd***** )
+  * anony.Masking.p_name ( 홍길동 -> 홍** )
+  * anony.Masking.p_car_num ( 차량 09 1234 -> 차량 09 ****)
+  * anony.Masking.p_phone ( 01000000000 -> 0100000****)
+  * anony.Masking.p_num ( 350081243222278 -> 3500****4322****)
+  * anony.Masking.address ( 인천광역시 중구 봉은사14거리 -> 인천광역시 중구 )
+  * aniny.Masking.hashText( satl + sha25(), ex) 홍길동 -> 831eec5830cb2b627d5829e9b61a8789d66e23c7b5a86f07e787a5ad77d4d0d1
+  
+   
