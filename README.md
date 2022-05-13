@@ -26,8 +26,22 @@ MyData-Shield의 Batch type 입니다. <br/>
 * hash Encripytin (sha256)
 * 
 * ### 익명 처리한 데이터 DB연동 테스트
-* PostgreSQL 기반의 ExperDB
+* PostgreSQL에 저장
 * 대량의 데이터 처리시 메모리에 대한 문제 해결을 위해 데이터를 일정 주기 및 수량으로 처리
 
 ### 구성도
 ![image](https://user-images.githubusercontent.com/61214962/161666884-7ef86f4a-00ad-4b89-9a69-fd1b81f4477d.png)
+
+### 설정
+1. **Config.py**의 DB정보 입력
+  1) host_r, dbname_r, username_r, password_r, port_r, table, schema_r 에 가명처리를 원하는 table이 존재하는 Postgrsql DB정보 입력
+  2) 해당 테이블에 resdata( log type )정보를 담은 칼럼을 column_r에 입력
+  3) host_p, dbname_p, username_p, password_p, port_p, schema_p 에 가명처리된 데이터가 저장될 Postgrsql DB정보 입력
+  4) 추가로 가명처리를 원하는 항목이 존재하면 primary_key에 입력
+  5) target_table 설정을 통해 resdata에 존재하는 가명 처리 항목명이 저장됨.
+
+2. **Config.py** 가명처리 정보 입력
+  1) data_c(데이터를 한번 처리할 양), time_c(가명처리가 완료 후 추가 데이터가 생기는 확인 하는 '초' 단위 주기)
+  2) table_target = { '항목명' = 가명 처리 방법, column_r : anony.faker.resdata } 테이블안에 가명 처리를 원하는 칼럼명 및 처리 방법 입력, column_r의 경우 테이블안에 resdata가   존재하면 사용, 존재하지 않으면 주석처리 
+  3) res_target = { '힝목명' = 가명 처리 방법 }
+
