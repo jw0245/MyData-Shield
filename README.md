@@ -9,7 +9,7 @@ MyData-Shield의 Batch type 입니다. <br/>
 
 ## 사용한 Python 외부 모듈
 * pandas 1.3.5
-* SQLAlcemy 1.4.36
+* SQLAlchemy 1.4.36
 * psycopg2-binary 2.9.3
 * numpy 1.21.6
 * pustil 5.9.0
