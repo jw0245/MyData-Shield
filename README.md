@@ -85,6 +85,7 @@ MyData-Shield의 Batch type 입니다. <br/>
   
 ## 실행
 * Python 가상환경 실행 ( env/Scipts )
+<br>
 **Window** 
 ```
 activate.bat
@@ -94,11 +95,11 @@ activate.bat
 source activate
 ```
 
-* MyDAataShield 폴더에 위치한 main.py ( 실시간 가명처리 모듈 )
+* MyDataShield 폴더에 위치한 main.py ( 실시간 가명처리 모듈 )
 ```
 python main.py
 ```
-* MyDAataShield 폴더에 위치한 add_target.py ( 가명처리를 완료한 테이블이 존재하고 res_target에 가명 처리 항목이 추가 되었을때 사용 )
+* MyDataShield 폴더에 위치한 add_target.py ( 가명처리를 완료한 테이블이 존재하고 res_target에 가명 처리 항목이 추가 되었을때 사용 )
 ```
 python add_target.py
 ```
