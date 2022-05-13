@@ -36,28 +36,28 @@ time_c = 300
 # Enter the name of the item requiring pseudonymization and the processing method.
 table_target = {    
                 
-                'prn_no' : anony.faker.num_faker,
-                'insu_seq' : anony.faker.num_faker,
-                'x_api_tran_id' : anony.faker.x_api_tran_id,
-                'api_tran_id' : anony.faker.api_tran_id,
-                'insu_num' : anony.faker.insu_num,
+                'prn_no' : anony.faker.fake_num,
+                'insu_seq' : anony.faker.fake_num,
+                'x_api_tran_id' : anony.faker.fake_id,
+                'api_tran_id' : anony.faker.fake_id,
+                'insu_num' : anony.faker.fake_num13,
                 'account_num' : anony.faker.account_num,
                 'client_id' : anony.faker.client_id,
                 'client_secret' : anony.faker.client_secret,
                 'domain' : anony.faker.domain,
-                'ci' : anony.faker.ci,
-                'corp_regno' : anony.faker.corp_regno,
-                'regno' : anony.faker.regno,
-                'domain_ip' : anony.faker.domain_ip,
+                'ci' : anony.faker.fake_num8,
+                'corp_regno' : anony.faker.fake_num13,
+                'regno' : anony.faker.fake_regno,
+                'domain_ip' : anony.faker.fake_ip,
                 column_r : anony.faker.resdata,
-                'ip' : anony.faker.ip,
+                'ip' : anony.faker.fake_ip,
                 'redirect_uri' : anony.faker.redirect_uri
             }
 
 ### resdata pseudonymization items 
 res_target = {
 
-                'x_api_tran_id' : anony.faker.x_api_tran_id,
+                'x_api_tran_id' : anony.faker.fake_id,
                 'client_id' : anony.faker.client_id,
                 'client_secret' : anony.faker.client_secret,
                 'account_num' : anony.faker.account_num,
@@ -67,25 +67,26 @@ res_target = {
                 'trans_memo' : anony.Masking.p_name,
                 'repay_account_num' : anony.faker.account_num,
                 'card_num' : anony.Masking.p_num,
-                'account_name' : anony.faker.name_faker,
+                'account_name' : anony.faker.fake_name,
                 'account_id' : anony.Masking.p_name,
                 'charge_account_num' : anony.faker.account_num,
                 'address' : anony.Masking.address,
                 'car_number' : anony.Masking.p_car_num,
-                'holder_name' : anony.faker.name_faker,
-                'name' : anony.faker.name_faker,
+                'holder_name' : anony.faker.fake_name,
+                'name' : anony.faker.fake_name,
                 'pay_id' : anony.Masking.p_num,
-                'trans_id' : anony.faker.num_faker,
-                'insured_name' : anony.faker.name_faker,
-                'user_ci' : anony.faker.num_faker,
-                'ig_cs_no' : anony.faker.num_faker,
+                'trans_id' : anony.faker.fake_num,
+                'insured_name' : anony.faker.fake_name,
+                'user_ci' : anony.faker.fake_num,
+                'ig_cs_no' : anony.faker.fake_num,
                 'coverage_num' : anony.faker.coverage_num,
                 'tx_id' : anony.faker.tx_id,
-                'insu_num' : anony.faker.insu_num,
-                'inuserd_no' : anony.faker.num_faker,
+                'insu_num' : anony.faker.fake_num13,
+                'inuserd_no' : anony.faker.fake_num,
                 'tx_id' : anony.faker.tx_id,
-                'domain_ip' : anony.faker.domain_ip,
+                'domain_ip' : anony.faker.fake_ip,
                 'telecom_num' : anony.Masking.p_phone
+
               }
                
 

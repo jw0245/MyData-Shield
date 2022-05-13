@@ -1,4 +1,4 @@
-# © 2022 gw0245 <gw0245@inent.com>
+# © 2022 LJW <gw0245@inzent.com>
 import re
 from faker import Faker
 import random
@@ -38,45 +38,39 @@ class faker:
         return ''
 
     # name form
-    def name_faker(data):
+    def fake_name(data):
         Faker.seed(data)
         trans_data = fake.name()
         print('fake_name : ' + trans_data)
         return trans_data
     
     # character_faker shows 19 corresponding random characters in seed
-    def character_faker(data):
+    def fake_character(data):
         Faker.seed(data)
         trans_data = fake.lexify('???????????????????')
         print(trans_data)
         return trans_data
     
     # num_faker shows 10 random digits
-    def num_faker(data):
+    def fake_num(data):
         Faker.seed(data)
         trans_data = fake.bothify(text='##########')
         print(trans_data)
         return trans_data
     
-    # x_api_tran_id(Fake data with 21 digits and letters)
-    def x_api_tran_id(data):
+    # id(Fake data with 21 digits and letters)
+    def fake_id(data):
         Faker.seed(data)
         trans_data = fake.lexify(text='?????????????????????', letters='ABCDEFGHIZKLMNOPQRSTUWYZabcdefghijklmnopqrstuwyz0123456789')
         print(trans_data)
         return trans_data
     
-    # api_tran_id
-    def api_tran_id(data):
-        
-        Faker.seed(data)
-        trans_data = fake.lexify(text='?????????????????????????', letters='ABCDEFGHIZKLMNOPQRSTUWYZ0123456789')
-        print(trans_data)
-        return trans_data
-    
     # Data including resdata in json format
     def resdata(data, res_target) :
+
         # 기존에 있는 마스킹 기법으로 json 안에 존재하는 데이터 처리
         # string type 데이터 JSON으로 변환
+
         res_list = []
         try :
             
@@ -103,13 +97,6 @@ class faker:
             print(v)
             exit()
         
-    # insu_num
-    def insu_num(data) : 
-        Faker.seed(data)
-        trans_data = fake.bothify(text='############')
-        print(trans_data)
-        return trans_data
-    
     # account_num
     def account_num(data) :
         Faker.seed(data)
@@ -140,37 +127,29 @@ class faker:
         print(trans_data)
         return 'https://' + fake.domain_name(domain_dot)
     
-    # ci
-    def ci(data) : 
+    # ci 
+    def fake_num8(data) : 
         Faker.seed(data)
         trans_data = fake.ean(length =8)
         print(trans_data)
         return trans_data
     
-    # corp_regno(법인등록번호) 13자리 숫자
-    def corp_regno(data) : 
+    # corp_regno
+    def fake_num13(data) : 
         Faker.seed(data)
-        trans_data = fake.ean(length =13)
+        trans_data = fake.ean(length = 13)
         print(trans_data)
         return trans_data
     
-    # 000-00-0000 형태의 사업자 등록번호
-    def regno(data) : 
+    # 000-00-0000 type regono
+    def fake_regno(data) : 
         Faker.seed(data)
         trans_data = fake.bothify(text='###-##-####')
         print(trans_data)
         return trans_data
     
-    # domain_ip
-    def domain_ip(data) :
 
-        Faker.seed(data)
-        trans_data = fake.ipv4_public()
-        print(trans_data)
-        return trans_data
-
-    # ip
-    def ip(data):
+    def fake_ip(data):
 
         Faker.seed(data)
         trans_data = fake.ipv4_public()
@@ -195,17 +174,15 @@ class faker:
     
     # sha256 암호화 코드 
     def sha256(data):
+
         Faker.seed(data)
         trans_data = fake.sha256()
         print(trans_data)
         return trans_data
-    # insured_no
-    def insured_no(data) :
-        Faker.seed(data)
-        trans_data = fake.bothify(text='##########')
-
+  
     # pseudonymization of tx_id entries
     def tx_id(data) :
+
         tx_sp = data.split('_')
         tx_r = tx_sp[0] + '_' + tx_sp[1] + '_' + tx_sp[2] + '_' + tx_sp[3] + '_' + tx_sp[4] + '_' + '*' * len(tx_sp[-2]) + '_' + '*' * len(tx_sp[-1])  
         print(tx_r)
