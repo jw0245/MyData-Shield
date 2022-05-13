@@ -88,11 +88,11 @@ MyData-Shield의 Batch type 입니다. <br/>
 
 **Window** 
 ```
-activate.bat
+> activate.bat
 ```
 **Linux**
 ```
-source activate
+$ source activate
 ```
 
 * MyDataShield 폴더에 위치한 main.py ( 실시간 가명처리 모듈 )
