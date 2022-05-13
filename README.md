@@ -42,12 +42,12 @@ MyData-Shield의 Batch type 입니다. <br/>
 
 2. **Config.py** 가명처리 정보 입력
   * **data_c** (데이터를 한번 처리할 양), **time_c** (가명처리가 완료 후 추가 데이터가 생기는 확인 하는 '초' 단위 주기)
-  * '''
+  * ```python
      table_target = { 
                       '항목명' = 가명 처리 방법,
                       column_r : anony.faker.resdata
                       }
-                      '''
+                      ```
   -> 테이블안에 가명 처리를 원하는 칼럼명 및 처리 방법 입력, column_r의 경우 테이블안에 resdata가   존재하면 사용, 존재하지 않으면 **주석처리** (가명 처리 방법은 3. 가명 처리 방법 설명 참고) 
   * res_target = { '힝목명' = 가명 처리 방법 } resdata 내에 가명 처리를 원하는 항목명 및 처리 방법 입력
   * 
