@@ -13,6 +13,7 @@ MyData-Shield의 Batch type 입니다. <br/>
 * psycopg2-binary 2.9.3
 * numpy 1.21.5
 * pustil 5.9.0
+* faker 13.11.0
 
 ### 금용 마이데이터 표준 API에 포함한 개인정보데이터 '항목명' 가명처리
 * 개인정보로 생각되는 '항목명' 식별 및 설정
