@@ -21,7 +21,7 @@ MyData-Shield의 Batch type 입니다. <br/>
 * 형식이 일정하여 예측가능한 개인정보데이터에 대한 가명처리
 
 ## 가명 처리 기법
-* Masking (ex : 123-124-1235 -> 123-***-****)
+* Masking (ex : 123-124-1235 -> 123-*******-********)
 * Faker (ex : 홍길동 -> 김철수)
 * hash Encripytin (sha256)
 
