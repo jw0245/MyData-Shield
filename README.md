@@ -103,5 +103,9 @@ python main.py
 ```
 python add_target.py
 ```
+
+## 참조
+* https://faker.readthedocs.io/en/master/
+* https://pandas.pydata.org/docs/
   
    
