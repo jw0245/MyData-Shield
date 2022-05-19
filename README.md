@@ -35,7 +35,7 @@ MyData-Shield의 Batch type 입니다. <br/>
 ## 설정
 1. **Config.py**의 DB정보 입력
   * **host_r, dbname_r, username_r, password_r, port_r, table, schema_r** 에 가명처리를 원하는 table이 존재하는 Postgrsql DB정보 입력
-  * 해당 테이블에 **resdata**( log type )정보를 담은 칼럼을 **column_r**에 입력
+  * 해당 테이블에 **resdata**( JSON type )정보를 담은 칼럼을 **column_r**에 입력
   * **host_p, dbname_p, username_p, password_p, port_p, schema_p** 에 가명처리된 데이터가 저장될 Postgrsql DB정보 입력
   * 추가로 가명처리를 원하는 항목이 존재하면 **primary_key**에 입력
   * **target_table** 설정을 통해 resdata에 존재하는 가명 처리 항목명이 저장됨.
@@ -84,9 +84,9 @@ MyData-Shield의 Batch type 입니다. <br/>
   * aniny.Masking.hashText  ( satl + sha25(), ex) 홍길동 -> 831eec5830cb2b627d5829e9b61a8789d66e23c7b5a86f07e787a5ad77d4d0d1 )
   
 ## 실행
-* Python 가상환경 실행 ( env/Scipts )
 
-**Window** 
+**Window**
+* Python 가상환경 실행 ( env/Scipts )
 ```
 > activate.bat
 ```
