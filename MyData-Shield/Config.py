@@ -7,25 +7,26 @@ dbname_r = ''
 username_r = ''
 password_r = ''
 port_r =''
-table = ''
 schema_r = ''
+table = ''
 
-# resdata column : If there is no resdata, the object is deleted from 'table_target' after commenting out
-column_r = ''
+
+# resdata column(Json form) : If there is no resdata, the object is deleted from 'table_target' after commenting out
+column_r = 'res_data'
 
 # Information needed for merging with additional pseudonymized columns
-primary_key = ''
+primary_key = 'seq_no'
 
 ### DB information where data will be stored after anonymization
-host_p = ''
-dbname_p =''
-username_p = ''
-password_p = ''
-port_p =''
-schema_p = ''
+host_p = 'localhost'
+dbname_p ='testdb'
+username_p = 'postgres'
+password_p = 'fourfive12!!'
+port_p ='5432'
+schema_p = 'mydata'
 
 # Table to contain anonymous/pseudonymized item names
-target_table = ''
+#target_table = 'target'
 
 ### Number of data to be processed at one time (variable = count)
 data_c = 10000

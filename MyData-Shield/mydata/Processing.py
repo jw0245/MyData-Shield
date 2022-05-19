@@ -21,16 +21,18 @@ def check_data(username_r, password_r, host_r, port_r, dbname_r, schema_r, table
     # Total number of rows in raw_table
     db_r = "postgresql://" + username_r + ":" + password_r + "@" + host_r + ":" + port_r + "/" + dbname_r
     engine_r = create_engine(db_r)
+
     count_r = pd.read_sql('SELECT count(*) FROM {schema}.{table_name}'.format(schema = schema_r, table_name = table), engine_r)
 
     # Whether a processing table exists
-    db_p = "postgresql://" + username_r + ":" + password_r + "@" + host_r + ":" + port_r + "/" + dbname_r
+    db_p = "postgresql://" + username_p + ":" + password_p + "@" + host_p + ":" + port_p + "/" + dbname_p
     engine_p = create_engine(db_p)
-    exists_table = pd.read_sql("select exists (select from information_schema.tables where table_schema = '{schema}' and table_name = '{table_name}')".format(schema = schema_r, table_name = table+'_faker'), engine_p)
 
+    exists_table = pd.read_sql("select exists (select from information_schema.tables where table_schema = '{schema}' and table_name = '{table_name}')".format(schema = schema_p, table_name = table+'_faker'), engine_p)
     if exists_table['exists'][0]:
-        count_p = pd.read_sql('SELECT count(*) FROM {schema}.{table_name}'.format(schema = schema_r, table_name = table+'_faker'), engine_p)
-        
+        count_p = pd.read_sql('SELECT count(*) FROM {schema}.{table_name}'.format(schema = schema_p, table_name = table+'_faker'), engine_p)
+        print('원시 데이터 개수 ' + str(count_r['count'][0]) +  '  처리된 데이터 개수 : ' + str(count_p['count'][0]) )
+
         if count_r['count'][0] - count_p['count'][0] > 0 :
             
             count = count_p['count'][0]
@@ -49,7 +51,7 @@ def check_data(username_r, password_r, host_r, port_r, dbname_r, schema_r, table
             check_data(username_r, password_r, host_r, port_r, dbname_r, schema_r, table, username_p, password_p, host_p, port_p, dbname_p, schema_p)
             
     else :
-
+        print('Create new table')
         return count
 
 def main(username_r, password_r, host_r, port_r, dbname_r, schema_r, table, table_target, column_r, res_target, username_p, password_p, host_p, port_p, dbname_p, schema_p, time_c, data_c) :

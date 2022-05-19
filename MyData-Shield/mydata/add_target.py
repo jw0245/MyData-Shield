@@ -56,6 +56,7 @@ def merge_table(conn_p, add_data, cur_p, table, column_r, primary_key, res_targe
 
          
 # Create table to store pseudonymized entries for resdata
+
 def target_data_saved(res_target, table_target, host_p, dbname_p, username_p, password_p, schema_p, table, port_p, column_r, primary_key, data_c):
    
     if column_r == '' :
