@@ -12,21 +12,19 @@ table = ''
 
 
 # resdata column(Json form) : If there is no resdata, the object is deleted from 'table_target' after commenting out
-column_r = 'res_data'
+column_r = ''
 
 # Information needed for merging with additional pseudonymized columns
-primary_key = 'seq_no'
+primary_key = ''
 
 ### DB information where data will be stored after anonymization
-host_p = 'localhost'
-dbname_p ='testdb'
-username_p = 'postgres'
-password_p = 'fourfive12!!'
-port_p ='5432'
-schema_p = 'mydata'
+host_p = ''
+dbname_p =''
+username_p = ''
+password_p = ''
+port_p =''
+schema_p = ''
 
-# Table to contain anonymous/pseudonymized item names
-#target_table = 'target'
 
 ### Number of data to be processed at one time (variable = count)
 data_c = 10000
