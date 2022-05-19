@@ -11,9 +11,9 @@ import sys
 
 # create log file
 log_count = 0
-while os.path.exists("./log/" + cf.table + "_log" + str(log_count) + ".txt") :
+while os.path.exists("./logs/" + cf.table + "_log" + str(log_count) + ".txt") :
     log_count += 1  
-sys.stdout = open('./log/' + cf.table + '_log' + str(log_count) + '.txt', 'w')
+sys.stdout = open('./logs/' + cf.table + '_log' + str(log_count) + '.txt', 'w')
 
 try :
     
