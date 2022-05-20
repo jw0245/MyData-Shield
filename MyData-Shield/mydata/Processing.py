@@ -31,7 +31,7 @@ def check_data(username_r, password_r, host_r, port_r, dbname_r, schema_r, table
     exists_table = pd.read_sql("select exists (select from information_schema.tables where table_schema = '{schema}' and table_name = '{table_name}')".format(schema = schema_p, table_name = table+'_faker'), engine_p)
     if exists_table['exists'][0]:
         count_p = pd.read_sql('SELECT count(*) FROM {schema}.{table_name}'.format(schema = schema_p, table_name = table+'_faker'), engine_p)
-        print('원시 데이터 개수 ' + str(count_r['count'][0]) +  '  처리된 데이터 개수 : ' + str(count_p['count'][0]) )
+        print('원시 데이터 개수 ' + str(count_r['count'][0]) +  '  처리된 데이터 개수 : ' + str(count_p['count'][0]))
 
         if count_r['count'][0] - count_p['count'][0] > 0 :
             
@@ -41,14 +41,14 @@ def check_data(username_r, password_r, host_r, port_r, dbname_r, schema_r, table
         
         ### When the number of raw data and processed data is the same
         elif count_r['count'][0] - count_p['count'][0] == 0 :
-
+            
             now = datetime.now()
             print("Time when there is no data to process : ", now.strftime('%Y-%m-%d %H:%M:%S'))
             print("Reprocess after " + str(time_c/60) + " minutes")
 
             time.sleep(time_c) #wait for time
             # 추가 데이터가 있는지 확인
-            check_data(username_r, password_r, host_r, port_r, dbname_r, schema_r, table, username_p, password_p, host_p, port_p, dbname_p, schema_p)
+            check_data(username_r, password_r, host_r, port_r, dbname_r, schema_r, table, username_p, password_p, host_p, port_p, dbname_p, schema_p, time_c)
             
     else :
         print('Create new table')

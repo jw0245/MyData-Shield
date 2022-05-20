@@ -11,7 +11,7 @@ schema_r = ''
 table = ''
 
 
-# resdata column(Json form) : If there is no resdata, the object is deleted from 'table_target' after commenting out
+# resdata column(Json form) : Columns containing information in JSON format, blank if not present
 column_r = ''
 
 # Information needed for merging with additional pseudonymized columns
