@@ -3,7 +3,7 @@ MyData-Shield의 Batch type 입니다. <br/>
 마이데이터 분석을 위하여 마아데이터에 포함한 개인정보 데이터를 가명/익명처리하는 프로젝트입니다.
 
 ## 실행 환경
-* OS : Window10 이상, Ubuntu 16 이상, Centos 7 이상
+* OS : Window10 이상, Ubuntu 16.x 이상, Centos 7.x 이상, 
 * PostgreSQL 
 * python 3.6 이상
 
@@ -103,6 +103,10 @@ python main.py
 ```
 python add_target.py
 ```
+## AWS AMI
+* OS : Amazon Linux release 2
+* DB : eXperDB(Postgresql)
+* python : 3.7.10
 
 ## 참조
 * https://faker.readthedocs.io/en/master/
