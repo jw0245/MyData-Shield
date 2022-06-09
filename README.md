@@ -79,7 +79,7 @@ MyData-Shield의 Batch type 입니다. <br/>
   * anony.Masking.p_name  ( 홍길동 -> 홍** )
   * anony.Masking.p_car_num  ( 차량 09 1234 -> 차량 09 ****)
   * anony.Masking.p_phone  ( 01000000000 -> 0100000****)
-  * anony.Masking.p_num  ( 350081243222278 -> 3500****4322****)
+  * anony.Masking.p_num  ( 350081243222278 -> 3500****|4322|****)
   * anony.Masking.address  ( 인천광역시 중구 봉은사14거리 -> 인천광역시 중구 )
   * aniny.Masking.hashText  ( satl + sha25(), ex) 홍길동 -> 831eec5830cb2b627d5829e9b61a8789d66e23c7b5a86f07e787a5ad77d4d0d1 )
   
