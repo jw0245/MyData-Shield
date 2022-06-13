@@ -70,6 +70,7 @@ class faker:
 
         # 기존에 있는 마스킹 기법으로 json 안에 존재하는 데이터 처리
         # string type 데이터 JSON으로 변환
+        # Jsonforamt이 섞여 있는 컬럼에 다른 데이터가 들어가 있을때
 
         res_list = []
         try :
@@ -93,9 +94,11 @@ class faker:
                 return str(res_list[0])
             
         except SyntaxError as v:
-            print('resdata is not in json format.')
+            print(str(data), end= '  ')
+            print(' is not in json format.')
             print(v)
-            exit()
+            return 'Bad Request'
+            #exit()
         
     # account_num
     def account_num(data) :
