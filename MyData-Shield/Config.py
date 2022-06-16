@@ -34,7 +34,7 @@ time_c = 300
 
 # Enter the name of the item requiring pseudonymization and the processing method.
 table_target = {    
-                
+                'id' : anony.Masking.p_data,
                 'prn_no' : anony.faker.fake_num,
                 'insu_seq' : anony.faker.fake_num,
                 'x_api_tran_id' : anony.faker.fake_id,
@@ -84,8 +84,10 @@ res_target = {
                 'inuserd_no' : anony.faker.fake_num,
                 'tx_id' : anony.faker.tx_id,
                 'domain_ip' : anony.faker.fake_ip,
-                'telecom_num' : anony.Masking.p_phone
-
-              }
-               
-
+                'telecom_num' : anony.Masking.p_phone,
+                'name' : anony.faker.fake_name,
+                'phone' : anony.Masking.p_phone,
+                'address' : anony.Masking.address,
+                'email' : anony.Masking.p_data,
+                'age' : anony.Masking.p_num
+}
